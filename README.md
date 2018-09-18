@@ -3,6 +3,15 @@ Scripts e apresentações para o curso de Cloudera Administrator.
 
 Configuração do cluster com o Cloudera Manager.
 
+## Sistemas de Big Data
+1. ETL
+1. Análise de dados
+1. Machine Learning
+1. Text Mining
+1. Gerenciamento de APIs
+1. Análise de dados não estruturados
+1. NoSQL
+
 ## Pré-requisitos
 1. Linux (Ubuntu)
 1. Rede
@@ -41,4 +50,5 @@ Plataforma para análise de dados.
 ## Modos de processamento
 1. Batch
 1. Streaming
+1. Modelo híbrido
 
