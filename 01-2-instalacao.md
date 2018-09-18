@@ -54,14 +54,20 @@ drop database scm;
 
 # Instalar no headnode:
 apt-get install cloudera-manager-daemons cloudera-manager-server
+
 # Preparar as tabelas do Cloudera Manager Server (SCM Server)
+```
 /usr/share/cmf/schema/scm_prepare_database.sh mysql \
   -h mariadbserver \
   --scm-host headnode01.lab \
   scm scm scm
+```
+
 # Iniciar o serviço (demora alguns minutos)
 service cloudera-scm-server start
+
 # Monitorar o log
 tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
+
 # Acesse a URL para concluir a instalação com o Wizard:
 http://headnode.lab:7180/
