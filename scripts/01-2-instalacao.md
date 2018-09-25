@@ -11,6 +11,17 @@ sudo sed -i -e 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/
 sudo service ssh restart
 ```
 
+# Alterar os nomes em cada nó
+```
+echo 'headnode.lab' > /etc/hostname"
+#
+echo 'edgenode.lab' > /etc/hostname"
+# 
+echo 'datanode01.lab' > /etc/hostname"
+# 
+echo 'datanode---------.lab' > /etc/hostname"
+```
+
 # Chaves (headserver01 como root)
 ```
 ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
