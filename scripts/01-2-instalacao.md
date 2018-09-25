@@ -23,13 +23,14 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub datanode03.lab
 
 # Repositório (todos os nós como root)
 ```
+echo 10 > /proc/sys/vm/swappiness
+sysctl -w vm.swappiness=10
 wget 'https://archive.cloudera.com/cm5/ubuntu/xenial/amd64/cm/cloudera.list' -O /etc/apt/sources.list.d/cloudera.list
 wget http://archive.cloudera.com/cdh5/ubuntu/xenial/amd64/cdh/archive.key
 apt-key add archive.key
 apt-get update
+apt-get upgrade -y
 apt-get -y install oracle-j2sdk1.7 libmysql-java ntp
-echo 10 > /proc/sys/vm/swappiness
-sysctl -w vm.swappiness=10
 ```
 
 # No MariaDB
